@@ -1,0 +1,21 @@
+{
+  "name": "express-blog",
+  "version": "1.0.0",
+  "description": "Custom Blog Space for Personal Branding",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others  \"nodemon .\" --env-file=.env"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Feri Lukmansyah",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.2.0",
+    "nodemon": "^3.1.4"
+  }
+}
