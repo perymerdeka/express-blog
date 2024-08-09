@@ -1,4 +1,4 @@
-const { db } = require('../config/firebase');
+const { db } = require('../config/firebaseServer');
 const { calculateReadTime } = require('../utils/calculateReadTime');
 const { convertToWIB, convertFirestoreTimestampToFullDateTime, convertFirestoreTimestampToDate } = require('../utils/timeHelper');
 
