@@ -9,6 +9,6 @@ app.use(express.json());
 
 // Routes
 app.use('/api', postRoutes);
-app.use('/api/auth/', authRoutes);
+app.use('/api/auth', authRoutes);
 
 module.exports = app;

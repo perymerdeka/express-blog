@@ -10,7 +10,6 @@ const {
   sendPasswordResetEmail 
 } = require("firebase/auth");
 
-const serviceAccount = require("../../serviceAccountKey.json");
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY || "AIzaSyD0KHqJ8BNEKvkjN93njGoeopyGXdHYuwk",

@@ -1,4 +1,7 @@
-const { auth } = require('../config/firebaseClient');
+const { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, 
+    signOut, 
+    sendEmailVerification,
+    sendPasswordResetEmail } = require('../config/firebaseClient');
 
 
 
@@ -11,6 +14,7 @@ class FirebaseAuthController {
                 password: "Password is required",
             });
         }
+
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 sendEmailVerification(auth.currentUser)
@@ -26,7 +30,11 @@ class FirebaseAuthController {
                 const errorMessage = error.message || "An error occurred while registering user";
                 res.status(500).json({ error: errorMessage });
             });
+
+        
     }
+
+    
 
     loginUser(req, res) {
         const { email, password } = req.body;
