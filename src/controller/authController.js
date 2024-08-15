@@ -1,3 +1,4 @@
+const { getAuth } = require('firebase-admin/auth');
 const { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, 
     signOut, 
     sendEmailVerification,
@@ -75,7 +76,7 @@ class FirebaseAuthController {
             });
     }
 
-    resetPassword(req, res){
+    resetPassword(req, res) {
         const { email } = req.body;
         if (!email ) {
           return res.status(422).json({

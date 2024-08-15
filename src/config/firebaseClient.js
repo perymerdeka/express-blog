@@ -1,5 +1,4 @@
 // Firebase Client SDK (Client-side)
-const { cert } = require("firebase-admin/app");
 const { initializeApp } = require("firebase/app");
 const { 
   getAuth, 
@@ -7,7 +6,7 @@ const {
   signInWithEmailAndPassword, 
   signOut, 
   sendEmailVerification, 
-  sendPasswordResetEmail 
+  sendPasswordResetEmail,
 } = require("firebase/auth");
 
 
